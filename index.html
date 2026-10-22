@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>inJeyneer · Practical AI & Engineering Field Guides</title>
+  <meta name="description" content="Tested AI prompts, workflows, and engineer-built guides for Claude, ChatGPT, and automated systems you can use the same day." />
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="inJeyneer · Practical AI & Engineering Guides" />
+  <meta property="og:description" content="Tested AI workflows and practical engineering guides that actually make sense." />
+  <meta property="og:image" content="assets/hero-photo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <a class="wordmark" href="./" aria-label="inJeyneer home">
+      <div class="wordmark-badge">INJ</div>
+      <div class="wordmark-title">
+        <span>inJeyneer</span>
+      </div>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="#guides">Guides</a>
+      <a class="nav-link" href="./about/">About</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="home-hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-kicker-row">
+        <p class="eyebrow">Practical AI Workflows · Open Field Guides</p>
+        <div class="status-pills">
+          <span class="tech-tag tech-tag-accent">Claude &amp; ChatGPT</span>
+          <span class="tech-tag">Prompt Systems</span>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Battle-tested AI guides that <em>actually deliver.</em></h1>
+          <div class="hero-intro">
+            <p>
+              I'm Jey. I strip away the AI hype and test model harnesses, prompts, and developer workflows into production-grade field guides you can implement immediately.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="#guides">Open Free Guide</a>
+              <a class="button button-outline" href="#contact">Get In Touch</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Photo Frame -->
+        <div class="photo-frame">
+          <div class="photo-frame-header">
+            <div class="photo-frame-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span>inJeyneer.sys</span>
+            <span>BUILD // READY</span>
+          </div>
+          <div class="photo-wrap">
+            <img
+              src="assets/hero-photo.jpg"
+              alt="Jey, creator behind inJeyneer"
+              class="hero-photo"
+              loading="eager"
+            />
+            <div class="photo-badge">
+              <span class="pulse-dot"></span>
+              <span>Online · inJeyneer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terminal Style Marquee Ticker -->
+  <div class="topic-ticker" aria-label="Topics">
+    <div class="ticker-track">
+      <span class="ticker-set">
+        <span>Prompt Engineering <b>//</b></span>
+        <span>Technical Resume Calibration <b>//</b></span>
+        <span>Claude Code <b>//</b></span>
+        <span>ChatGPT Systems <b>//</b></span>
+        <span>AI Agents <b>//</b></span>
+        <span>Automated Verification <b>//</b></span>
+      </span>
+      <span class="ticker-set" aria-hidden="true">
+        <span>Prompt Engineering <b>//</b></span>
+        <span>Technical Resume Calibration <b>//</b></span>
+        <span>Claude Code <b>//</b></span>
+        <span>ChatGPT Systems <b>//</b></span>
+        <span>AI Agents <b>//</b></span>
+        <span>Automated Verification <b>//</b></span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Guides Section -->
+  <section class="guide-section" id="guides">
+    <div class="guide-heading-row">
+      <div>
+        <p class="eyebrow">Specifications &amp; Playbooks</p>
+        <h2>Free Field Guides</h2>
+      </div>
+    </div>
+
+    <!-- Search & Filter Controls -->
+    <div class="guide-tools">
+      <div class="filter-row" aria-label="Filter guides by category">
+        <button class="filter-chip is-active" type="button" data-category="all">All</button>
+        <button class="filter-chip" type="button" data-category="workflows">Workflows</button>
+        <button class="filter-chip" type="button" data-category="career">Career Systems</button>
+      </div>
+
+      <label class="search-field" for="guide-search-input">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input
+          id="guide-search-input"
+          type="search"
+          placeholder="Filter guides (e.g. calibration, resume, audit)..."
+          autocomplete="off"
+        />
+      </label>
+    </div>
+
+    <p class="guide-count" id="guide-count-label">1 published guide</p>
+
+    <!-- Guide Grid -->
+    <div class="guide-grid">
+      <!-- 4-Stage Technical Resume Calibration Card -->
+      <a
+        class="guide-card"
+        href="./guides/four-pass-ai-resume-review/"
+        data-category="workflows"
+      >
+        <div>
+          <div class="guide-card-meta">
+            <span class="spec-id">SPEC // 01</span>
+            <span class="guide-category">workflows</span>
+            <span class="guide-free">Verified Free</span>
+          </div>
+          <h3>The 4-Stage Technical Resume Calibration</h3>
+        </div>
+        <div class="guide-card-bottom">
+          <p>Audit, score, rewrite, and stress-test your resume against an exact job post using four isolated AI passes.</p>
+          <span class="guide-arrow" aria-hidden="true">&rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="guide-empty" id="guide-empty-state">No guides found matching that query. Try searching "calibration" or "resume"!</p>
+
+    <!-- Engineering Roadmap Preview -->
+    <div class="roadmap-card">
+      <p class="eyebrow">Coming Down The Pipe</p>
+      <h3>Upcoming Engineering Playbooks</h3>
+      <p>
+        I test model behaviors rigorously before publishing. New guides undergo benchmark runs to ensure reproducible results without hallucinations.
+      </p>
+      <div class="roadmap-list">
+        <span class="roadmap-tag">[IN DEV] Claude Code Project Memory Harness</span>
+        <span class="roadmap-tag">[BENCHMARKING] Local LLM Tool-Calling Stacks</span>
+        <span class="roadmap-tag">[TESTING] Prompt Injection Defense Checklist</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Email Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <p class="eyebrow" style="justify-content: center;">Direct Contact</p>
+      <h2>Have questions or a workflow to suggest?</h2>
+      <p class="contact-desc">
+        I test and reverse-engineer AI workflows, prompt harnesses, and developer tooling. Drop me a note with what you're building or wrestling with.
+      </p>
+
+      <div class="contact-card">
+        <span class="contact-label">Email us at</span>
+        <a class="contact-email-link" href="mailto:support@jeystack.com?subject=inJeyneer%20Workflow%20Inquiry">support@jeystack.com</a>
+        <p class="contact-response-time">
+          <span class="pulse-dot"></span>
+          We typically respond within 24–48 hours.
+        </p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:support@jeystack.com?subject=inJeyneer%20Workflow%20Inquiry">Send Email &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>&copy; 2026 inJeyneer &middot; Built &amp; Maintained by Jey</p>
+      <p>Hosted on <a href="https://docs.gitlab.com/ee/user/project/pages/" target="_blank" rel="noopener">GitLab Pages</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
