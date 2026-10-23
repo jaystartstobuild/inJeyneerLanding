@@ -119,6 +119,7 @@
       <div class="filter-row" aria-label="Filter guides by category">
         <button class="filter-chip is-active" type="button" data-category="all">All</button>
         <button class="filter-chip" type="button" data-category="workflows">Workflows</button>
+        <button class="filter-chip" type="button" data-category="security">Security &amp; Infra</button>
         <button class="filter-chip" type="button" data-category="career">Career Systems</button>
       </div>
 
@@ -130,13 +131,13 @@
         <input
           id="guide-search-input"
           type="search"
-          placeholder="Filter guides (e.g. calibration, resume, audit)..."
+          placeholder="Filter guides (e.g. PHP, security, resume, audit)..."
           autocomplete="off"
         />
       </label>
     </div>
 
-    <p class="guide-count" id="guide-count-label">1 published guide</p>
+    <p class="guide-count" id="guide-count-label">2 published guides</p>
 
     <!-- Guide Grid -->
     <div class="guide-grid">
@@ -159,9 +160,29 @@
           <span class="guide-arrow" aria-hidden="true">&rarr;</span>
         </div>
       </a>
+
+      <!-- PHP-CGI RCE Post-Mortem Card -->
+      <a
+        class="guide-card"
+        href="./guides/php-cgi-rce-cve-2024-4577/"
+        data-category="security"
+      >
+        <div>
+          <div class="guide-card-meta">
+            <span class="spec-id">SPEC // 02</span>
+            <span class="guide-category">security</span>
+            <span class="guide-free">Verified Free</span>
+          </div>
+          <h3>The PHP-CGI Remote Code Execution Post-Mortem (CVE-2024-4577)</h3>
+        </div>
+        <div class="guide-card-bottom">
+          <p>Technical autopsy of the Windows Best-Fit encoding flaw, active TellYouThePass ransomware exploitation, and production hardening rules.</p>
+          <span class="guide-arrow" aria-hidden="true">&rarr;</span>
+        </div>
+      </a>
     </div>
 
-    <p class="guide-empty" id="guide-empty-state">No guides found matching that query. Try searching "calibration" or "resume"!</p>
+    <p class="guide-empty" id="guide-empty-state">No guides found matching that query. Try searching "security", "PHP", or "resume"!</p>
 
     <!-- Engineering Roadmap Preview -->
     <div class="roadmap-card">

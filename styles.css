@@ -1344,6 +1344,297 @@ a {
 }
 
 /* ==========================================================================
+   Security Guide & Interactive Evaluator Components
+   ========================================================================== */
+.security-badge-critical {
+  color: #fda4af;
+  background: rgba(244, 63, 94, 0.15);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.security-badge-safe {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.security-badge-warning {
+  color: #fde68a;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.byte-pipeline-card {
+  background: #05080f;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  margin: 32px 0 40px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.byte-pipeline-header {
+  background: var(--bg-surface-raised);
+  border-bottom: 1px solid var(--border-strong);
+  padding: 12px 18px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--cyan);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.05em;
+}
+
+.pipeline-flow {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pipeline-step {
+  background: #090d14;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 16px;
+  position: relative;
+}
+
+.pipeline-step .step-num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--cyan);
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.pipeline-step .step-title {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.pipeline-step code {
+  display: block;
+  background: #020408;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: #f87171;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+
+.pipeline-step p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.pipeline-arrow {
+  text-align: center;
+  color: var(--cyan);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.blueprint-callout {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-accent);
+  border-radius: 8px;
+  margin: 28px 0 36px;
+  overflow: hidden;
+}
+
+.blueprint-callout-header {
+  background: rgba(2, 132, 199, 0.15);
+  border-bottom: 1px solid var(--border-accent);
+  padding: 10px 18px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cyan);
+  display: flex;
+  justify-content: space-between;
+}
+
+.blueprint-timeline {
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cyan);
+}
+
+.safety-evaluator-card {
+  background: #070b12;
+  border: 2px solid var(--border-strong);
+  border-radius: 8px;
+  margin: 36px 0 44px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+}
+
+.safety-evaluator-header {
+  background: var(--bg-surface-raised);
+  border-bottom: 1px solid var(--border-strong);
+  padding: 14px 20px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.evaluator-form-grid {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.evaluator-field label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.evaluator-field select {
+  width: 100%;
+  background: #0c121e;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.evaluator-field select:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
+}
+
+.evaluator-result {
+  background: #04060a;
+  border-top: 1px solid var(--border-strong);
+  padding: 24px;
+}
+
+.evaluator-result h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0 0 10px;
+}
+
+.evaluator-result p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+
+.eval-crit-box {
+  background: rgba(244, 63, 94, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-size: 13.5px;
+  color: #fecdd3;
+  line-height: 1.6;
+}
+
+.eval-crit-box ol {
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+
+.eval-safe-tag {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+.eval-warn-tag {
+  display: inline-block;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fde68a;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+.matrix-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0 36px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: #05080f;
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 @media (max-width: 960px) {

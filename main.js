@@ -21,9 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
         await navigator.clipboard.writeText(textToCopy);
         btn.textContent = 'COPIED!';
         btn.style.backgroundColor = 'var(--emerald)';
-        btn.style.color = '#06111e';
+        const defaultMsg = btn.getAttribute('data-copy-msg') || 
+          (targetElement.closest('.guide-copy-block')?.getAttribute('aria-label')?.toLowerCase().includes('prompt')
+            ? '✓ Copied prompt to clipboard! Ready to paste into Claude or ChatGPT.'
+            : '✓ Copied snippet to clipboard! Ready to run or paste into your config.');
         if (statusElement) {
-          statusElement.textContent = '✓ Copied prompt to clipboard! Ready to paste into Claude or ChatGPT.';
+          statusElement.textContent = defaultMsg;
         }
         setTimeout(() => {
           btn.textContent = originalText;
