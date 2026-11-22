@@ -1672,3 +1672,26 @@ a {
     align-items: flex-start;
   }
 }
+
+/* Black Friday Deals section */
+.deals-section { padding-top: 0; }
+.deals-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--bg-surface-card);
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--amber);
+  border-radius: 8px;
+  padding: 28px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.deals-card:hover { border-color: var(--amber); transform: translateY(-3px); }
+.deals-card-copy { min-width: 0; }
+.deals-card h3 { margin: 0 0 8px; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.25; }
+.deals-card p { margin: 0; color: var(--text-muted); max-width: 65ch; }
+.deals-shortcuts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.deals-shortcuts .filter-chip { text-decoration: none; }
+@media (max-width: 560px) { .deals-card { padding: 20px; } }
